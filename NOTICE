@@ -1,0 +1,73 @@
+scissor-py research prototype, 2026-10-09
+
+This distribution contains a Python translation/adaptation of the Scissor
+APML1 Net algorithms and new Python preprocessing, validation, diagnostics,
+corrected solvers, tests, packaging, and documentation.
+
+Upstream work: Scissor, by Duanchen Sun (author and maintainer).
+Repository: https://github.com/sunduanchen/Scissor
+Exact source commit: 311560a1f160f665917e7da0fcf289914ee99773
+Files used: R/APML1.R, R/net_lm.R, R/net_logit.R, R/net_cox.R,
+R/Scissor.R, src/Scissor.cpp, DESCRIPTION, README.md, LICENSE.
+Unmodified source snapshots and SHA-256 hashes are included in the source
+distribution under reference/upstream and reference/manifest.json.
+
+Scissor DESCRIPTION declares GPL (>= 2). Its README and LICENSE identify
+GPL version 3. This prototype is distributed under GPL-3.0-or-later, with
+the original GPLv3 license text preserved in LICENSE and the unmodified
+upstream license retained in the reference source snapshot. No MIT-license
+or upstream-endorsement claim is made.
+
+Modifications made 2026-10-09:
+- NumPy/SciPy/pandas implementation; no R runtime or R bridge.
+- Sparse, explicitly identified input graph; no automatic graph construction.
+- Separate official safe-subset compatibility and explicit corrected semantics.
+- Guards for undefined upstream graph indexing and invalid scientific inputs.
+- Corrected Gaussian curvature/stopping, exact logistic objective, stable
+  Breslow Cox optimizer, aligned cell graph, and actual Cox lambda labels.
+- Explicit convergence diagnostics, strict CV candidate failure handling,
+  metadata, ID alignment, optional duck-typed AnnData adapter, and test fixtures.
+- APML1 L0 post-fit trimming, adaptive penalties/signs, and other penalties
+  are not implemented; Scissor's untrimmed Net selection is the scope.
+
+Additional checkpoint modifications made 2026-10-10:
+- Reject rectangular graphs before ID alignment and duplicate target IDs.
+- Bounded column-block normalization/Pearson retains every input observation.
+- Handle actual AnnData backed sparse expression through its public interface.
+- Add real AnnData/H5AD input, graph, memory and numeric-boundary tests.
+- Preserve original reference evidence and clearly mark full LUAD validation
+  and formal Omicverse writeback as unfinished in this checkpoint.
+- Explicit complete-LUAD acquisition/preparation scripts and full input hashes;
+  independent development R/Rcpp mathematical oracle, without modifying the
+  original Scissor source snapshot.
+- Corrected Gaussian full-KKT active set and explicitly requested optional
+  Numba loop (no fastmath, no parallel JIT, default NumPy path retained).
+- Stable extreme-float quantile/Pearson arithmetic and sparse COO duplicate
+  edge validation before coalescing. No phenotype or cell is silently dropped.
+
+Quantile-normalization behavior was verified against preprocessCore 1.75.1
+by Ben Bolstad, source commit 5f4522fcbce0820b4983f453e3d56341da62da85.
+preprocessCore is a development oracle only and is not bundled in the runtime.
+
+Scientific citation (not a substitute for the license):
+Sun D et al. Identifying phenotype-associated subpopulations by integrating
+bulk and single-cell sequencing data. Nature Biotechnology (2021).
+https://doi.org/10.1038/s41587-021-01091-3
+
+This is an independent research prototype, not an official
+Scissor release and not a clinical or diagnostic product.
+
+Further development modifications made 2026-10-10:
+- Explicit AnnData annotation with collision checks and rollback; standard-JSON
+  audit schema, typed identifiers, graph hash and separate atomic H5AD writer.
+- Optional local OmicVerse single.Scissor class candidate, using the public
+  registry and only two namespace registration lines. The wrapper delegates
+  numerical work to scissor_py and imports it only when run is called.
+- Package-local workflow skill and a plain-Python-cell-validated notebook.
+
+Repository documentation and packaging refresh, 2026-10-11:
+- Bilingual README, runnable synthetic quickstart, API and reproduction guides,
+  contributor/security guidance and machine-readable citation metadata.
+- Golden-reference integrity checks, explicit threshold-contract helper,
+  portable LF reference attributes and network-blocked installed-wheel example.
+- Numerical implementation and previously recorded R results are unchanged.

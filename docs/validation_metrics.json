@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-09",
+  "python": "3.12.14",
+  "platform": "Linux",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "pandas": "2.2.3",
+  "explicit_r_fixtures": [
+    {
+      "family": "gaussian",
+      "precision": "default",
+      "max_abs_coefficient_error": 2.220446049250313e-16,
+      "max_abs_cv_mean_error": 6.938893903907228e-17,
+      "max_abs_cv_se_error": 1.3877787807814457e-17,
+      "lambda_min_matches": true
+    },
+    {
+      "family": "gaussian",
+      "precision": "tight",
+      "max_abs_coefficient_error": 2.220446049250313e-16,
+      "max_abs_cv_mean_error": 6.938893903907228e-17,
+      "max_abs_cv_se_error": 1.3877787807814457e-17,
+      "lambda_min_matches": true
+    },
+    {
+      "family": "binomial",
+      "precision": "default",
+      "max_abs_coefficient_error": 8.881784197001252e-16,
+      "max_abs_cv_mean_error": 2.220446049250313e-16,
+      "max_abs_cv_se_error": 1.942890293094024e-16,
+      "lambda_min_matches": true
+    },
+    {
+      "family": "binomial",
+      "precision": "tight",
+      "max_abs_coefficient_error": 1.7763568394002505e-15,
+      "max_abs_cv_mean_error": 2.220446049250313e-16,
+      "max_abs_cv_se_error": 1.1102230246251565e-16,
+      "lambda_min_matches": true
+    },
+    {
+      "family": "cox",
+      "precision": "default",
+      "max_abs_coefficient_error": 1.887379141862766e-15,
+      "max_abs_cv_mean_error": 8.881784197001252e-16,
+      "max_abs_cv_se_error": 6.661338147750939e-16,
+      "lambda_min_matches": true
+    },
+    {
+      "family": "cox",
+      "precision": "tight",
+      "max_abs_coefficient_error": 1.1102230246251565e-15,
+      "max_abs_cv_mean_error": 1.3322676295501878e-15,
+      "max_abs_cv_se_error": 5.967448757360216e-16,
+      "lambda_min_matches": true
+    }
+  ],
+  "sparse_graph": {
+    "nodes": 100000,
+    "nnz": 199998,
+    "csr_bytes": 2799980,
+    "dense_equivalent_bytes": 80000000000
+  },
+  "cox_risk_memory": {
+    "samples": 6000,
+    "predictors": 3,
+    "python_numpy_tracemalloc_peak_bytes": 722376,
+    "dense_risk_matrix_bytes": 288000000,
+    "note": "tracemalloc is not total process RSS"
+  },
+  "bounded_path_timings": [
+    {
+      "family": "gaussian",
+      "samples": 60,
+      "cells": 80,
+      "lambdas": 6,
+      "seconds": 0.1861860929930117,
+      "converged": true,
+      "max_kkt": 9.987359074654922e-08
+    },
+    {
+      "family": "binomial",
+      "samples": 60,
+      "cells": 80,
+      "lambdas": 6,
+      "seconds": 0.04567789200518746,
+      "converged": true,
+      "max_kkt": 9.58363246417876e-08
+    },
+    {
+      "family": "cox",
+      "samples": 60,
+      "cells": 80,
+      "lambdas": 6,
+      "seconds": 0.08330417900288012,
+      "converged": true,
+      "max_kkt": 9.92631865801008e-08
+    }
+  ]
+}

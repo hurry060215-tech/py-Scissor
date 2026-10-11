@@ -1,0 +1,276 @@
+{
+  "family": "gaussian",
+  "alpha": 0.05,
+  "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+  "absolute_tolerance": 1e-12,
+  "relative_tolerance": 1e-10,
+  "arrays": {
+    "cv.npz": {
+      "mean_loss": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 4.336808689942018e-18
+      },
+      "standard_error": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 2.4123498337802474e-18
+      },
+      "fold_loss": {
+        "passed": true,
+        "entries": 100,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 1.452830911130576e-17
+      },
+      "valid": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "foldid": {
+        "passed": true,
+        "entries": 471,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "fold_1.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.634245682171411e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 8.881784197001252e-16
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "fold_2.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.670674875166924e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 1.7763568394002505e-15
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "fold_3.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 5.055851570734404e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.552713678800501e-15
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "fold_4.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.737949619969649e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.552713678800501e-15
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "fold_5.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 3.814656923672999e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 1.7763568394002505e-15
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "full.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 82040,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 4.173744683200198e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 2.220446049250313e-15
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "converged": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "iterations": {
+        "passed": true,
+        "entries": 20,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    },
+    "refit.npz": {
+      "coefficients": {
+        "passed": true,
+        "entries": 4102,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 1.9376861226660935e-15
+      },
+      "intercepts": {
+        "passed": true,
+        "entries": 1,
+        "requires_exact_equality": false,
+        "max_absolute_difference": 2.220446049250313e-15
+      },
+      "converged": {
+        "passed": true,
+        "entries": 1,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      },
+      "lambdas": {
+        "passed": true,
+        "entries": 1,
+        "requires_exact_equality": true,
+        "max_absolute_difference": 0.0
+      }
+    }
+  },
+  "numpy_seconds": 2677.0291884670005,
+  "numba_seconds_including_compile": 321.22121177699955,
+  "numba_compile_seconds": 4.1925846310005,
+  "numpy_engine_metadata_present": false,
+  "numpy_engine_provenance": "Explicit NumPy-only command started before engine option was introduced",
+  "numpy_peak_rss_bytes": 236826624,
+  "numba_peak_rss_bytes": 419151872,
+  "timing_scope": "observed single-thread full data, all 20 lambdas, all 5 folds, cold selected-lambda refit; concurrent task load may differ",
+  "selection": {
+    "lambda_min": true,
+    "lambda_1se": true,
+    "positive_count": true,
+    "negative_count": true,
+    "cutoff_reached": true
+  },
+  "passed": true,
+  "observed_total_speed_ratio": 8.33391161703688
+}

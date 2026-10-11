@@ -1,0 +1,3 @@
+# Golden reference hashes are defined over the original LF bytes.
+reference/upstream/** text eol=lf
+reference/fixtures/** text eol=lf

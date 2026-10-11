@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scissor-py"
+version = "0.1.0.dev4"
+description = "Research prototype of the Scissor phenotype-guided cell selection kernel"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE", "NOTICE"]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=1.5"]
+keywords = ["single-cell", "bulk RNA-seq", "phenotype", "Scissor", "bioinformatics"]
+classifiers = ["Development Status :: 2 - Pre-Alpha", "Intended Audience :: Science/Research", "Programming Language :: Python :: 3"]
+
+[project.urls]
+Homepage = "https://github.com/hurry060215-tech/py-Scissor"
+Documentation = "https://github.com/hurry060215-tech/py-Scissor/blob/main/docs/API.md"
+Repository = "https://github.com/hurry060215-tech/py-Scissor"
+Issues = "https://github.com/hurry060215-tech/py-Scissor/issues"
+"Original Scissor" = "https://github.com/sunduanchen/Scissor"
+
+[project.optional-dependencies]
+test = ["pytest>=7", "build>=1"]
+integration-test = ["anndata>=0.10", "h5py>=3.8", "nbformat>=5"]
+acceleration = ["numba>=0.61"]
+validation = ["rdata>=1.0"]
+notebook = ["anndata>=0.12", "h5py>=3.8", "nbformat>=5", "nbclient>=0.10", "ipykernel>=6"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+

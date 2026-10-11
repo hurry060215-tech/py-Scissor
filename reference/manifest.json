@@ -1,0 +1,148 @@
+{
+  "Scissor": {
+    "repository": "https://github.com/sunduanchen/Scissor",
+    "commit": "311560a1f160f665917e7da0fcf289914ee99773",
+    "source_policy": "Original computational statements; line endings normalized to LF; no algorithm patches"
+  },
+  "preprocessCore": {
+    "repository": "https://github.com/bmbolstad/preprocessCore",
+    "commit": "5f4522fcbce0820b4983f453e3d56341da62da85",
+    "version": "1.75.1",
+    "configure_args": "--disable-threading",
+    "license": "LGPL (>= 2)"
+  },
+  "execution": {
+    "R": "4.5.0",
+    "compiler_flags": "-O0 -g0",
+    "Scissor_loading": "Rcpp::sourceCpp plus source(R/APML1.R, net_lm.R, net_logit.R, net_cox.R)",
+    "matrix_JSON_orientation": "rowmajor",
+    "undefined_access_executed": false
+  },
+  "fixture_count": 22,
+  "files": {
+    "upstream/DESCRIPTION": {
+      "sha256": "61c45b0a0333fb14455883ca53d0242bc33de7017bf52fe6911e2a7aea3f9821",
+      "bytes": 899
+    },
+    "upstream/LICENSE": {
+      "sha256": "0ae0485a5bd37a63e63603596417e4eb0e653334fa6c7f932ca3a0e85d4af227",
+      "bytes": 35148
+    },
+    "upstream/R/APML1.R": {
+      "sha256": "97efab6e998a14b6fc0ce5a427743afcb16340e4aa03b6a1f6d2e89c098ebdb3",
+      "bytes": 1641
+    },
+    "upstream/R/Scissor.R": {
+      "sha256": "2e4f3617cbc24db0e39875e16f34149d629671ddd18bbd18464655f6aff94021",
+      "bytes": 9732
+    },
+    "upstream/R/net_cox.R": {
+      "sha256": "41f51d3c7f7f923e29491070dd9ec0d874e8c9ce342731152fb0954c974cd6e5",
+      "bytes": 12663
+    },
+    "upstream/R/net_lm.R": {
+      "sha256": "e109c66f07344191b9a3968dc1c53e0e70a0c1c32cd6bc75b9c563feb65fb987",
+      "bytes": 10811
+    },
+    "upstream/R/net_logit.R": {
+      "sha256": "23b5de85454acff1f224b2a79d4c958535ba27f85c8184cf815110868435c1cf",
+      "bytes": 10676
+    },
+    "upstream/README.md": {
+      "sha256": "f2cf270cf820d15046e86305e4b3b25b9ab0a8aa43868b4841f8a0f3a937751e",
+      "bytes": 2500
+    },
+    "upstream/src/Scissor.cpp": {
+      "sha256": "aa250b2ad38436ab985b78c08c4e0a53537aee82b6240e7d186340a0b56baabd",
+      "bytes": 65058
+    },
+    "fixtures/binomial_default_automatic_cv.json": {
+      "sha256": "56ffdebbe88a1e58743d34fd3fe55fc690bffeb28b7656e9a6be901ec9bea129",
+      "bytes": 11151
+    },
+    "fixtures/binomial_default_explicit_cv.json": {
+      "sha256": "249a95d290ce1f24be94061f8be87b1fe05e091f5172ab610f19fc6b8e159cf2",
+      "bytes": 5750
+    },
+    "fixtures/binomial_default_with_trimming.json": {
+      "sha256": "4ad4a3461b82be1e63366b4a186a6bb13e69d93f61fc4a2b95604b27e7318663",
+      "bytes": 5769
+    },
+    "fixtures/binomial_expression_harness.json": {
+      "sha256": "0ee7aadaf8438776ac9b01d09720e970eb49bd0cb3e210671183a3c967af0383",
+      "bytes": 54029
+    },
+    "fixtures/binomial_tight_explicit_cv.json": {
+      "sha256": "88a9337632fb90884d56890c04d87914846d85aefbe869ee6395c5b8e3a53efe",
+      "bytes": 5753
+    },
+    "fixtures/cox_default_explicit_cv.json": {
+      "sha256": "1155bb5447e2e5d70b7a72a314fd324d20b4f3396610e6adf28cdb86adf8292c",
+      "bytes": 5911
+    },
+    "fixtures/cox_default_with_trimming.json": {
+      "sha256": "518fd4741c0f65c6523046daa8516c17534b400e0e5834b5dc8d280c6ca00b46",
+      "bytes": 5876
+    },
+    "fixtures/cox_expression_harness.json": {
+      "sha256": "5d4300f5a870f1cbf7ee7c88e074085a9edcfa574d5529e32591c6d32cd324f1",
+      "bytes": 51139
+    },
+    "fixtures/cox_graph_alignment_audit.json": {
+      "sha256": "c99816a65ae0206e05182d76ba0e208487c726d7e7f7beeeb1a79b23aec55bfa",
+      "bytes": 6695
+    },
+    "fixtures/cox_lambda_audit.json": {
+      "sha256": "da5612c8206a2f33a77fd80a373bdd6a998f7c4b21a83c67a321cb1a6e20e603",
+      "bytes": 8811
+    },
+    "fixtures/cox_tight_explicit_cv.json": {
+      "sha256": "765786ffb11add762fa36a231d15ceb05a5c32c6a6a49ae42e04f36a7b530372",
+      "bytes": 5913
+    },
+    "fixtures/gaussian_curvature_audit.json": {
+      "sha256": "0da94d02267809937860d2479f2d7cc96a8b1485a7c3d2d4403d01549c2d29ca",
+      "bytes": 2060
+    },
+    "fixtures/gaussian_cv_curvature_audit.json": {
+      "sha256": "aee669e6dfa7e3ae93fcd2f4eb026eb04c630a270704ab95747008169cd99682",
+      "bytes": 3038
+    },
+    "fixtures/gaussian_default_automatic_cv.json": {
+      "sha256": "07585415b87093aafe10baa9d66165a296bcc6e66400e596d9b873395e241065",
+      "bytes": 11463
+    },
+    "fixtures/gaussian_default_explicit_cv.json": {
+      "sha256": "16b0e2383afa76980405e8c13a3ef3049b317e9a1f55587be10e830cbb588e35",
+      "bytes": 6191
+    },
+    "fixtures/gaussian_default_with_trimming.json": {
+      "sha256": "ac986bb8c02517c21f4465ec31c4b35d8baac803958ebb307b286d25856c78f6",
+      "bytes": 6208
+    },
+    "fixtures/gaussian_expression_harness.json": {
+      "sha256": "55bcd84f4d371e8a06c76ca17c4507c45c8e191daba586c8e2091258d5fb3673",
+      "bytes": 54699
+    },
+    "fixtures/gaussian_graph_alignment_audit.json": {
+      "sha256": "d2cb3b78dea0e3085a6acc668f19b1370c1e0b1a568a57c276b808a6692ef953",
+      "bytes": 6996
+    },
+    "fixtures/gaussian_tight_explicit_cv.json": {
+      "sha256": "b17164ef9db1f0006a4c05b27830cfee7ee25de7f45811b512437462c91a3e72",
+      "bytes": 6191
+    },
+    "fixtures/graph_index_audit.json": {
+      "sha256": "7c088020d7e07b5e88d213d913d287a3e9e0ae5cd379175d900a2fd6e0154e5b",
+      "bytes": 1432
+    },
+    "fixtures/preprocessing_constant_column.json": {
+      "sha256": "0a2580471b83adf724785c8a3b40aecc580788995e1b86b764237420f4652a6d",
+      "bytes": 685
+    },
+    "fixtures/preprocessing_ties.json": {
+      "sha256": "5f19373f2af4399989497ba7fcde9f1e88af089474e596af84ac766ea409409d",
+      "bytes": 3565
+    }
+  }
+}

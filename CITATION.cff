@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "Please cite the original Scissor paper below and acknowledge this independent Python implementation and its exact commit."
+type: software
+title: "py-Scissor: independent Python APML1-Net kernel"
+authors:
+  - name: "py-Scissor contributors"
+version: "0.1.0.dev4"
+license: GPL-3.0-or-later
+repository-code: "https://github.com/hurry060215-tech/py-Scissor"
+url: "https://github.com/hurry060215-tech/py-Scissor"
+preferred-citation:
+  type: article
+  title: "Identifying phenotype-associated subpopulations by integrating bulk and single-cell sequencing data"
+  journal: "Nature Biotechnology"
+  doi: "10.1038/s41587-021-01091-3"
+  authors:
+    - family-names: Sun
+      given-names: Duanchen
+    - family-names: Guan
+      given-names: Xiangnan
+    - family-names: Moran
+      given-names: Amy E.
+    - family-names: Wu
+      given-names: Ling-Yun
+    - family-names: Qian
+      given-names: David Z.
+    - family-names: Schedin
+      given-names: Pepper
+    - family-names: Dai
+      given-names: Mu-Shui
+    - family-names: Danilov
+      given-names: Alexey V.
+    - family-names: Alumkal
+      given-names: Joshi J.
+    - family-names: Adey
+      given-names: Andrew C.
+    - family-names: Spellman
+      given-names: Paul T.
+    - family-names: Xia
+      given-names: Zheng

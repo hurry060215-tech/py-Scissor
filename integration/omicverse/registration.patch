@@ -1,0 +1,18 @@
+--- a/omicverse/single/__init__.py
++++ b/omicverse/single/__init__.py
+@@ -127,6 +127,7 @@
+ # Single-cell CNV inference — pure-Python CopyKAT / inferCNV wrappers.
+ # Usage: cnv = ov.single.CNV(adata, method='copykat'); cnv.run()
+ from ._cnv import CNV
++from ._scissor import Scissor
+ 
+ # Single-cell metabolism — scMetabolism / Compass / scFEA + MEBOCOST.
+ # Usage: met = ov.single.Metabolism(adata, method='scmetabolism'); met.run()
+@@ -259,6 +260,7 @@
+ 
+ 
+ __all__ = [
++    'Scissor',
+     # Core analysis functions
+     'cosg',
+     'lazy',

@@ -1,0 +1,48 @@
+name: Python kernel tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.12']
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[test]'
+      - run: python -m pytest -q
+      - run: python -m build
+      - run: python scripts/check_distribution.py dist/*
+      - name: Install wheel outside source, with no R or optional backend
+        run: |
+          python -m venv /tmp/scissor-wheel
+          /tmp/scissor-wheel/bin/python -m pip install dist/*.whl
+          cp scripts/wheel_smoke.py /tmp/scissor-wheel-smoke.py
+          cp examples/quickstart.py /tmp/scissor-quickstart.py
+          cd /tmp
+          /tmp/scissor-wheel/bin/python -I -c "import runpy; runpy.run_path('/tmp/scissor-wheel-smoke.py', run_name='__main__'); runpy.run_path('/tmp/scissor-quickstart.py', run_name='__main__')"
+  optional:
+    runs-on: ubuntu-latest
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install '.[test,integration-test,acceleration]'
+      - run: python -m pytest -q

@@ -1,0 +1,2570 @@
+{
+  "schema_version": "scissor-py-luad-aggregate/1",
+  "scope": "full 4102-cell explicit-graph experiment; 471 survival and 498 TP53 samples; synthetic Gaussian phenotype",
+  "grid": "three alphas, twenty lambdas, five fixed folds and cold refit; not the 100-lambda API default",
+  "privacy": "aggregate checks only; no sample IDs, cell IDs, phenotypes, expression or coefficients",
+  "missing_report_policy": "not_reported does not distinguish pending from never run and is never a pass",
+  "expected_same_threshold_grid": [
+    {
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.05,
+      "threshold": 1e-07,
+      "status": "passed",
+      "reports": [
+        "binomial-official-0.05.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.2,
+      "threshold": 1e-07,
+      "status": "passed",
+      "reports": [
+        "binomial-official-0.2.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.6,
+      "threshold": 1e-07,
+      "status": "passed",
+      "reports": [
+        "binomial-official-0.6.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-08,
+      "status": "passed",
+      "reports": [
+        "gaussian-default-0.05.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "gaussian-default-0.2.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "gaussian-default-0.6.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-08,
+      "status": "passed",
+      "reports": [
+        "binomial-default-0.05.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "binomial-python-default-R-default-0.2.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "binomial-python-default-R-default-0.6.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-08,
+      "status": "passed",
+      "reports": [
+        "cox-default-0.05.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "cox-python-default-R-default-0.2.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-08,
+      "status": "failed",
+      "reports": [
+        "cox-python-default-R-default-0.6.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "gaussian-both-tight-0.05.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "gaussian-both-tight-0.2.json"
+      ]
+    },
+    {
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "gaussian-both-tight-0.6.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "binomial-both-tight-0.05.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "binomial-both-tight-0.2.json"
+      ]
+    },
+    {
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "binomial-both-tight-0.6.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "cox-both-tight-0.05.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "cox-both-tight-0.2.json"
+      ]
+    },
+    {
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "threshold": 1e-10,
+      "status": "passed",
+      "reports": [
+        "cox-both-tight-0.6.json"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "comparison_report": "binomial-both-tight-0.05.json",
+      "comparison_report_sha256": "483fcd5470a0a1a3b38cfa129265d06f7cea628fc646b35ed95f81ded6e6d092",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 9.568133008119872e-08,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 5.265940883347753e-08,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 8.216982383402183e-08,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.220446049250313e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.630422629186114e-10,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.5651050167562204e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 2.3310953167765547e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-both-tight-0.2.json",
+      "comparison_report_sha256": "a104735bd9b03a5988a5168da32af8bd05fcb1bd2a72151f285348fd4f5a5e27",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 2.127666796081229e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 6.647498684841935e-08,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.139453127407819e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 3.3306690738754696e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.6018664172889885e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 8.021574932071118e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 4.23233759150321e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-both-tight-0.6.json",
+      "comparison_report_sha256": "d9aadeba767e268e041b195e23eb8252fb9fa1d8cff1a38609bd515a86d9724a",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 9.927601700154831e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.0749140533228285e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 2.5711235984715586e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 8.881784197001252e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.961431683739079e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 9.33939016400931e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 5.534438463072888e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-default-0.05.json",
+      "comparison_report_sha256": "4057c80f5195c46ceedf88121bcd0b3fccbff3c63f3da9710724b11db9d403aa",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.424106707810513e-05,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 5.419384437654884e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.1792291829682e-05,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 3.977929097231936e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 8.472098067535683e-08,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.452608123705181e-08,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 3.6797366509411233e-07,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-official-0.05.json",
+      "comparison_report_sha256": "c6df06b35ab41f4162556985f10739a1b7582d8e8085800fed5d5b48eb76f5b8",
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-07,
+      "r_threshold": 1e-07,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 7.216449660063518e-15,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 3.241851231905457e-14,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 3.68594044175552e-14,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 3.3306690738754696e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.220446049250313e-16,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.3201926491189795e-16,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.3322676295501878e-15,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-official-0.2.json",
+      "comparison_report_sha256": "d4fd895d2976202aedcc91b7f5b7a0cbe02822727068d1977104788cfeedbbc8",
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-07,
+      "r_threshold": 1e-07,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 3.9745984281580604e-14,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 5.81756864903582e-14,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 7.37188088351104e-14,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.220446049250313e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 4.440892098500626e-16,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.706168622523819e-16,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.7763568394002505e-15,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-official-0.6.json",
+      "comparison_report_sha256": "a0dde5d90e8846ef2cb1e4df2c3456c07f2cd6551694dde57c3aa781c1e7769f",
+      "family": "binomial",
+      "semantics": "official",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-07,
+      "r_threshold": 1e-07,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.3644640972643174e-13,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 4.1300296516055823e-14,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 9.392486788328824e-14,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.220446049250313e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 6.661338147750939e-16,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 7.28583859910259e-16,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 2.886579864025407e-15,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-python-default-R-default-0.2.json",
+      "comparison_report_sha256": "7bcba0289984f17f587ba2eb29cb6b977626784994c30e24a5d7555e71f35200",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.906113463277792e-05,
+          "outside_tolerance": 7
+        },
+        "intercepts": {
+          "max_absolute_error": 8.670330177817931e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 8.867565684411716e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 4.8339110492179316e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 8.11248579424273e-08,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.967520892737218e-08,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 2.398162481931365e-07,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-python-default-R-default-0.6.json",
+      "comparison_report_sha256": "431368a88474a66d0b3baedda8bb22392d4397e4b7ad4ce30ee74810fb25f73d",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 7.816176818764564e-05,
+          "outside_tolerance": 341
+        },
+        "intercepts": {
+          "max_absolute_error": 1.6009019785379053e-05,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.4269944871969642e-05,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 6.619371717420108e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.1626067020209518e-07,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.518856785816871e-08,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 4.3843465191706343e-07,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-python-tight-R-default-0.05.json",
+      "comparison_report_sha256": "ffd1aaa9a22f8ef34db917a4d394dc45286715d4b2d0391895da0d3886f3fb3a",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 9.432699590236626e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 4.837074725205781e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 4.51270766976819e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.7555735471196385e-13,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 5.346258769023393e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.0780331357571347e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.2681959482563343e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-python-tight-R-default-0.2.json",
+      "comparison_report_sha256": "f528dd1572adbe327e0d90466c66a87d846ab8d449e198f30197d1abd3fbd008",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 5.193403969594446e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.065207998252049e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.5510073065883034e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.1965983759409937e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.4419579086322187e-08,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 9.681193624544449e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 6.045152489697614e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "binomial-python-tight-R-default-0.6.json",
+      "comparison_report_sha256": "0b16be02b1973efe126cff9a358576927db384d12ae1f6289688c79e77f254b9",
+      "family": "binomial",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 2.9479943603194503e-05,
+          "outside_tolerance": 35
+        },
+        "intercepts": {
+          "max_absolute_error": 3.314819164490501e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 4.23024539530914e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.9093394360302227e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.5658758834600235e-08,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.960322844329898e-08,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 9.621500596246335e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-both-tight-0.05.json",
+      "comparison_report_sha256": "627662c12c9329a89a0e1dbacafff62846207cdf25fb1e7c55f478b126fbc917",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 9.37335697670516e-08,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.4808937587318383e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 8.881784197001252e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.1631486884766673e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.5873539555586476e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 3.4596450149138036e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-both-tight-0.2.json",
+      "comparison_report_sha256": "bab56d0b09e60e9e43fc534ffb80f8438027ce2cc3011efe0341d08e55a48407",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 3.001256196066837e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 2.3777590807405602e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 8.881784197001252e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.1378737951872608e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.7024923693043092e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.067026289547357e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-both-tight-0.6.json",
+      "comparison_report_sha256": "2210db65ddce3a319a3f84d8cf6aaa293f2eb81a79299cc69a7e42402ac226fb",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.4130674150791833e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 4.466756345355982e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.7763568394002505e-15,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 5.270790914835288e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 4.909102298278345e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 2.407107047019963e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-default-0.05.json",
+      "comparison_report_sha256": "b984404ffb28dc54be05f16eb5b6d1b78563e68667a952fb82edbe2d777ffadd",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.1217515407571654e-05,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.4411823387572298e-05,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 3.2640556923979602e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.523301319001803e-07,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.4459607143579856e-07,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 9.301260801564126e-07,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-python-default-R-default-0.2.json",
+      "comparison_report_sha256": "86514c7532d62248cbe126906bf65b4d4ffda3673f8cba6a26b50f75929d7909",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 3.7278825175068864e-05,
+          "outside_tolerance": 158
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 2.9699389615611693e-05,
+          "outside_tolerance": 17
+        },
+        "objective": {
+          "max_absolute_error": 3.813172000377563e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.0862789965315756e-06,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.230359101949465e-07,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 2.8477163338536116e-06,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-python-default-R-default-0.6.json",
+      "comparison_report_sha256": "c3e1733b5720053f30df299873b9acc1e1acf6bc8e0c0e034f8b588989e36d69",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 0.0001451494794094954,
+          "outside_tolerance": 1173
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 5.419494806924163e-05,
+          "outside_tolerance": 104
+        },
+        "objective": {
+          "max_absolute_error": 1.2315037878352086e-11,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 4.350657700769034e-07,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.2219715602525558e-07,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 4.562350606640564e-06,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-python-tight-R-default-0.2.json",
+      "comparison_report_sha256": "23da3625abd14606f80302a8f4303e32b495739e9a5c37b56aee458df9e7b9e6",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.5783400077601373e-05,
+          "outside_tolerance": 11
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 6.102201035973476e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 5.825118165603271e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.3664440068339445e-07,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 5.093498572222854e-08,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 3.1306984560330875e-07,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "cox-python-tight-R-default-0.6.json",
+      "comparison_report_sha256": "403cd7e6b78ce238a13a6aadd1006a982d5b3af9cad7b81dc795db09421aa4b2",
+      "family": "cox",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numpy",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 6.602428870217808e-05,
+          "outside_tolerance": 384
+        },
+        "intercepts": {
+          "max_absolute_error": 0.0,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.2072762556797345e-05,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.014388573139513e-11,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 0,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.144073463801078e-07,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.8624047340085048e-07,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.728796635624974e-06,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-both-tight-0.05.json",
+      "comparison_report_sha256": "2365ef6df4ed6f65ee8eda5407a8e5dd7232727e4b9a76c0786256f9ae3882c0",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.388262436535781e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.1531072097170636e-08,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.9053151056880324e-08,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.4609624274242172e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 9.538192284608282e-12,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.2158738562729217e-12,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 4.0185814745297144e-11,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-both-tight-0.2.json",
+      "comparison_report_sha256": "9550d8390b49b8bf7f25f3655d331e4e004cda8d1023f6fcb2b47b9898ba8e5e",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 5.653315555513572e-07,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.1460967730414495e-08,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 3.7843358224876056e-08,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.389581588158052e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.0732082500404814e-11,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.731307080392406e-11,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 7.39457209656888e-11,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-both-tight-0.6.json",
+      "comparison_report_sha256": "b82719e57742f5dafc731ed6b3c942d75b900f5a49373def50bd241cacc8a86b",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-10,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.4028189338072261e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 4.9405900259813507e-08,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 8.429091113981713e-08,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 4.975945870622223e-16,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 6.11891782902052e-11,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.42833468990563e-11,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.811447596740054e-10,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-default-0.05.json",
+      "comparison_report_sha256": "21333f20b719bc4a005069df78efc0858b9ad4aec6c82a9c4d86d423144f01fe",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numba",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 9.822828607208497e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 8.095100660909793e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.7692050482409627e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.5935984628255573e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 3,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.1389209705545134e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.3012869511596584e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 7.507731017604435e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-default-0.2.json",
+      "comparison_report_sha256": "54ad0683ba939b0d2548452cb3ba145b6bcc0edfc10493a99872663dace598ba",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numba",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 4.106010850448913e-05,
+          "outside_tolerance": 574
+        },
+        "intercepts": {
+          "max_absolute_error": 1.2822666071166111e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 3.2352317069772596e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 2.7151272766548495e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 3,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 2.231275290399959e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.2251858179656043e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 5.691405392707193e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-default-0.6.json",
+      "comparison_report_sha256": "5d32c89573dc8825250bc3bb6c077257038075140b41b03f25445f0a77307bd6",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numba",
+      "python_threshold": 1e-08,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": true,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 0.00014244869217021165,
+          "outside_tolerance": 1328
+        },
+        "intercepts": {
+          "max_absolute_error": 3.786981817466284e-06,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 8.279061256555309e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 4.3366143467026e-12,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 3,
+      "stable_sign_differences": 1,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 6.112696837850401e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 3.1499793903908696e-09,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 1.8008068660172946e-08,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-python-tight-R-default-0.05.json",
+      "comparison_report_sha256": "79d0a5f30368fc758a7a8a0479da1272a1e725c30919c3d2fba21f94d8ec5eca",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.05,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.9405463530033917e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.6315698925239985e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 2.7682016945362875e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.1933769944461048e-13,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.142095080401001e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 7.481259835533018e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 4.121332532625727e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-python-tight-R-default-0.2.json",
+      "comparison_report_sha256": "a3839dc7e0cf0c48141a8ede215dab254e4ab7ff5b6ee04c7be906b5d8f0801b",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.2,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": true,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 8.302036163570364e-06,
+          "outside_tolerance": 0
+        },
+        "intercepts": {
+          "max_absolute_error": 1.6236502720090584e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 6.315142622170811e-07,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 1.6112046592742235e-13,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.1314593840842935e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 7.128437995050294e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 3.6958071793907754e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    },
+    {
+      "comparison_report": "gaussian-python-tight-R-default-0.6.json",
+      "comparison_report_sha256": "3767ddf6e63a9d85d66dd72c5c36e884dda84448119877f3cb0f1c7e0ce2b918",
+      "family": "gaussian",
+      "semantics": "corrected",
+      "alpha": 0.6,
+      "python_engine": "numba",
+      "python_threshold": 1e-10,
+      "r_threshold": 1e-08,
+      "same_requested_tolerance": false,
+      "manifest_sha256": "001f3cd90dd02953ed7379e01827699bc4da7a621ef055500289d4e908991eee",
+      "tolerances": {
+        "coefficients": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "intercepts": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "linear_predictions": {
+          "atol": 1e-05,
+          "rtol": 0.0001
+        },
+        "objective": {
+          "atol": 1e-08,
+          "rtol": 1e-06
+        },
+        "cv_loss_and_se": {
+          "atol": 1e-06,
+          "rtol": 0.0001
+        }
+      },
+      "passed": false,
+      "contract_passed": true,
+      "path_count": 7,
+      "path_metrics": {
+        "coefficients": {
+          "max_absolute_error": 1.722189624792092e-05,
+          "outside_tolerance": 5
+        },
+        "intercepts": {
+          "max_absolute_error": 4.2561826552045545e-07,
+          "outside_tolerance": 0
+        },
+        "linear_predictions_all_samples": {
+          "max_absolute_error": 1.2091815704273756e-06,
+          "outside_tolerance": 0
+        },
+        "objective": {
+          "max_absolute_error": 3.3103251043109516e-13,
+          "outside_tolerance": 0
+        }
+      },
+      "strict_sign_differences": 1,
+      "stable_sign_differences": 0,
+      "stable_coefficient_threshold": 1e-05,
+      "cv_checks": {
+        "mean_loss": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 1.5420598222827542e-09,
+          "outside_tolerance": 0
+        },
+        "standard_error": {
+          "passed": true,
+          "entries": 20,
+          "max_absolute_error": 9.837166894461529e-10,
+          "outside_tolerance": 0
+        },
+        "fold_losses": {
+          "passed": true,
+          "entries": 100,
+          "max_absolute_error": 5.638470477412755e-09,
+          "outside_tolerance": 0
+        },
+        "lambda_min_exact": true,
+        "valid_matches": true,
+        "lambda_1se_exact": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "source": "https://sunduanchen.github.io/Scissor/vignettes/Scissor_Tutorial.html",
+  "requested_at": "2026-10-10T14:52:01.870039+00:00",
+  "sampling": "none",
+  "files": [
+    {
+      "name": "TCGA_LUAD_survival.RData",
+      "url": "https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/TCGA_LUAD_survival.RData",
+      "status": 200,
+      "expected_bytes": 2984,
+      "etag": "\"6b323f5a72777c928f438340b960772f\"",
+      "last_modified": "Thu, 22 Apr 2021 04:03:31 GMT",
+      "bytes": 2984,
+      "sha256": "21db515e895bf0b38128a1409ec9ecf9937c2bf374aeffc7623546b742d71f9d",
+      "complete": true,
+      "elapsed_seconds": 3.317
+    },
+    {
+      "name": "TCGA_LUAD_TP53_mutation.RData",
+      "url": "https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/TCGA_LUAD_TP53_mutation.RData",
+      "status": 200,
+      "expected_bytes": 2286,
+      "etag": "\"fa0544f072ec166cd933cba3511933d6\"",
+      "last_modified": "Thu, 22 Apr 2021 04:03:31 GMT",
+      "bytes": 2286,
+      "sha256": "ba9215c76f6f163a54859fdae99daffe23963fdbceea77ba02369daabb7469e6",
+      "complete": true,
+      "elapsed_seconds": 3.067
+    },
+    {
+      "name": "scRNA-seq.RData",
+      "url": "https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/scRNA-seq.RData",
+      "status": 200,
+      "expected_bytes": 18290662,
+      "etag": "\"8bb24980ecf407ade5790a4a16fa22d4-2\"",
+      "last_modified": "Thu, 22 Apr 2021 04:03:30 GMT",
+      "bytes": 18290662,
+      "sha256": "2d4c1d15cb5d434231a361e6a75de6698c4cc29bcef127b8277d75eee6f8fae0",
+      "complete": true,
+      "elapsed_seconds": 3.347
+    },
+    {
+      "name": "TCGA_LUAD_exp1.RData",
+      "url": "https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/TCGA_LUAD_exp1.RData",
+      "status": 200,
+      "expected_bytes": 114713028,
+      "etag": "\"7023125b4f81d46cb10e672f39f11bb0-7\"",
+      "last_modified": "Thu, 22 Apr 2021 04:03:30 GMT",
+      "bytes": 114713028,
+      "sha256": "9958dc10107cbbdb0e3570efa615344e15bc3db0bca592854d3bc17b1c297ac0",
+      "complete": true,
+      "elapsed_seconds": 4.905
+    },
+    {
+      "name": "TCGA_LUAD_exp2.RData",
+      "url": "https://xialab.s3-us-west-2.amazonaws.com/Duanchen/Scissor_data/TCGA_LUAD_exp2.RData",
+      "status": 200,
+      "expected_bytes": 120866965,
+      "etag": "\"d06bd7d5b261fc38aa062aca6e5002f5-8\"",
+      "last_modified": "Thu, 22 Apr 2021 04:03:30 GMT",
+      "bytes": 120866965,
+      "sha256": "e93cfb6d883beac241fc3095a0615158a6d365817c5b538bffdf6877e1946cf0",
+      "complete": true,
+      "elapsed_seconds": 5.531
+    }
+  ]
+}

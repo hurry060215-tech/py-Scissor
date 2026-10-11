@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "notebook": "tutorials/scissor_walkthrough.ipynb",
+  "code_cells": 7,
+  "seconds": 13.749948978998873,
+  "execution_method": "plain Python shared namespace, exact notebook source and assertions; no Jupyter kernel",
+  "jupyter_kernel_verified": false,
+  "network": "tutorial installs process-local external HTTP/DNS/socket guard",
+  "scope": "synthetic three-family API, actual installed OmicVerse candidate, JSON/H5AD; no full LUAD refitting",
+  "output_normalization": "Local project prefix in stdout/stderr replaced by $PROJECT; code and numerical outputs unchanged"
+}

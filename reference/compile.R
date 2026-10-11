@@ -1,0 +1,8 @@
+args <- commandArgs(trailingOnly = TRUE)
+script_arg <- grep('^--file=',commandArgs(FALSE),value=TRUE)
+root <- if (length(args)) args[[1]] else if(length(script_arg)) dirname(normalizePath(sub('^--file=','',script_arg[[1]]))) else getwd()
+Sys.setenv(R_MAKEVARS_USER = file.path(root, 'Makevars'))
+dir.create(file.path(root,'cache'), showWarnings=FALSE)
+Rcpp::sourceCpp(file.path(root, 'upstream/src/Scissor.cpp'), cacheDir=file.path(root,'cache'), rebuild=FALSE, verbose=FALSE)
+for (f in c('APML1.R','net_lm.R','net_logit.R','net_cox.R')) source(file.path(root,'upstream/R',f))
+cat('FIXED_SCISSOR_SOURCE_COMPILED\n')
