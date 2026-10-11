@@ -25,6 +25,12 @@ jobs:
       - run: python -m pytest -q
       - run: python -m build
       - run: python scripts/check_distribution.py dist/*
+      - name: Test the extracted source distribution
+        run: |
+          mkdir /tmp/scissor-sdist
+          tar -xzf dist/*.tar.gz -C /tmp/scissor-sdist
+          cd /tmp/scissor-sdist/scissor_py-*
+          python -m pytest -q
       - name: Install wheel outside source, with no R or optional backend
         run: |
           python -m venv /tmp/scissor-wheel

@@ -41,7 +41,7 @@ def test_wheel_rejects_bundled_reference_runtime(tmp_path):
     path = tmp_path / "test.whl"
     with zipfile.ZipFile(path, "w") as archive:
         archive.writestr("reference/oracle.R", "")
-    with pytest.raises(ValueError, match="Unexpected runtime"):
+    with pytest.raises(ValueError, match="Non-Python/oracle"):
         checker()(path)
 
 
@@ -55,12 +55,29 @@ def test_wheel_package_and_license_allowed(tmp_path):
 
 def test_private_notebook_warning_output_rejected(tmp_path):
     payload = b'{"cells":[{"outputs":[{"text":"/workspace/private/environment/warning"}]}]}'
-    with pytest.raises(ValueError, match="Private execution metadata"):
+    with pytest.raises(ValueError, match="External contribution/tutorial"):
         checker()(sdist(tmp_path, "tutorials/example.ipynb", payload))
 
 
-def test_normalized_notebook_warning_output_allowed(tmp_path):
+def test_even_sanitized_full_notebook_is_outside_core_distribution(tmp_path):
     payload = b'{"cells":[{"outputs":[{"text":"$PROJECT/environment/warning"}]}]}'
-    result = checker()(sdist(tmp_path, "tutorials/example.ipynb", payload))
-    assert result["notebooks_content_checked"] == 1
-    assert result["public_file_boundary"] == "passed"
+    with pytest.raises(ValueError, match="External contribution/tutorial"):
+        checker()(sdist(tmp_path, "tutorials/example.ipynb", payload))
+
+
+@pytest.mark.parametrize("name", ["reference/audit.R", "reference/src/Scissor.cpp",
+                                  "reference/Makevars", "integration/adapter.py",
+                                  "skills/SKILL.md", "scissor_py/vendor/oracle.cxx"])
+def test_oracle_and_external_trees_are_not_core_source_members(tmp_path, name):
+    with pytest.raises(ValueError):
+        checker()(sdist(tmp_path, name))
+
+
+@pytest.mark.parametrize("name", ["scissor_py/oracle.R", "scissor_py/vendor/oracle.cpp",
+                                  "scissor_py/native.so", "scissor_py/reference.json"])
+def test_runtime_package_cannot_hide_reference_or_native_code(tmp_path, name):
+    path = tmp_path / "test.whl"
+    with zipfile.ZipFile(path, "w") as archive:
+        archive.writestr(name, "")
+    with pytest.raises(ValueError):
+        checker()(path)

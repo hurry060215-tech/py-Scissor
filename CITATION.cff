@@ -4,7 +4,7 @@ type: software
 title: "py-Scissor: independent Python APML1-Net kernel"
 authors:
   - name: "py-Scissor contributors"
-version: "0.1.0.dev4"
+version: "0.1.0.dev5"
 license: GPL-3.0-or-later
 repository-code: "https://github.com/hurry060215-tech/py-Scissor"
 url: "https://github.com/hurry060215-tech/py-Scissor"

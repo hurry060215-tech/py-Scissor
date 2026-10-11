@@ -11,8 +11,8 @@ exploit details or affected private data. No private email address or guaranteed
 response time is advertised by this project.
 
 The package is research pre-alpha and is not a clinical or diagnostic system.
-Only reviewed source should be executed; R reference scripts and explicit data
-download helpers are development tools, not part of ordinary library runtime.
+Only reviewed source should be executed; R reference code lives in a separate fixed development archive. Explicit Python
+data-download helpers are development tools, never part of library runtime.
 The project does not automatically download data, install packages or submit
-analytics. OmicVerse has its own independent import behavior; the included
-integration tests use a network guard rather than changing that upstream code.
+analytics. OmicVerse and its integration tests belong to a separate contribution; it has
+its own independent import behavior. It is not a dependency of this kernel.

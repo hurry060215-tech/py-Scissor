@@ -9,13 +9,14 @@ Repository: https://github.com/sunduanchen/Scissor
 Exact source commit: 311560a1f160f665917e7da0fcf289914ee99773
 Files used: R/APML1.R, R/net_lm.R, R/net_logit.R, R/net_cox.R,
 R/Scissor.R, src/Scissor.cpp, DESCRIPTION, README.md, LICENSE.
-Unmodified source snapshots and SHA-256 hashes are included in the source
-distribution under reference/upstream and reference/manifest.json.
+SHA-256 hashes and original license/attribution notices remain under
+reference/manifest.json and reference/upstream. The complete unmodified source
+snapshots are in the separate development archive identified below.
 
 Scissor DESCRIPTION declares GPL (>= 2). Its README and LICENSE identify
 GPL version 3. This prototype is distributed under GPL-3.0-or-later, with
 the original GPLv3 license text preserved in LICENSE and the unmodified
-upstream license retained in the reference source snapshot. No MIT-license
+upstream license retained under reference/upstream/LICENSE. No MIT-license
 or upstream-endorsement claim is made.
 
 Modifications made 2026-10-09:
@@ -71,3 +72,12 @@ Repository documentation and packaging refresh, 2026-10-11:
 - Golden-reference integrity checks, explicit threshold-contract helper,
   portable LF reference attributes and network-blocked installed-wheel example.
 - Numerical implementation and previously recorded R results are unchanged.
+
+Repository responsibility separation, 2026-10-11 (0.1.0.dev5):
+- No changes to Python numerical algorithms. Remove R/C++ reference code and
+  compiler settings from the main tree and both source/wheel distributions.
+- Preserve complete development references at repository commit
+  2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50 (validation-reference branch):
+  https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50
+- Keep required JSON fixtures, original provenance hashes, GPL text and notices.
+- Separate OmicVerse adapter, full tutorial and skill contributions from the core.

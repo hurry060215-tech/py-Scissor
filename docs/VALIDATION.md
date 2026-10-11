@@ -1,5 +1,7 @@
 # 验证报告：scissor-py 0.1.0.dev0
 
+这是保留的早期原型报告，下方待完成列表描述当时状态。最新数值结果与完成范围见 [当前验证状态](VALIDATION_STATUS.md)。dev5 已将本报告提及的 R/C++ 源码与生成器路径移到[固定开发归档](https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference)，不再随当前核心源码包安装。
+
 日期：2026-10-09。范围：独立 Python Scissor APML1-Net 研究原型；本地构建，未发布。
 
 ## 结论

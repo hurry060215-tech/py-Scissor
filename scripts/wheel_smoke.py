@@ -5,11 +5,22 @@ from pathlib import Path
 import subprocess
 import sys
 import socket
+import os
+import shutil
+
+# Installed NumPy/SciPy wheels need no external compiler or R executable.
+os.environ["PATH"] = ""
+assert all(shutil.which(name) is None for name in ("R", "Rscript", "cc", "gcc", "g++", "clang"))
 
 def no_child_process(*args, **kwargs):
     raise AssertionError("runtime smoke must not spawn R or any child process")
 
 subprocess.Popen = no_child_process
+os.system = no_child_process
+os.popen = no_child_process
+for name in ("posix_spawn", "posix_spawnp"):
+    if hasattr(os, name):
+        setattr(os, name, no_child_process)
 
 def no_network(*args, **kwargs):
     raise AssertionError("runtime smoke and quickstart must not access the network")
@@ -44,5 +55,5 @@ for family,y in outcomes.items():
 print(json.dumps({"version":scissor_py.__version__,"python":sys.version.split()[0],
                   "import_from_site_packages":True,"rpy2_present":False,
                   "optional_heavy_modules_imported":False,
-                  "child_processes_forbidden":True,"network_forbidden":True,
+                  "child_processes_forbidden":True,"R_and_compilers_on_PATH":False,"network_forbidden":True,
                   "families_passed":families}))

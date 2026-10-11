@@ -13,7 +13,7 @@ They are distinct from the primary 22-file fixture suite.
 The graphs are safe irregular graphs with the final two nodes isolated. This
 does not establish compatibility for unsafe or arbitrary graph configurations.
 
-Reproduce with R/Rcpp/RcppEigen/Matrix/jsonlite installed:
+The generators are preserved in the [separate fixed development archive](https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference/review). In that archive checkout only, reproduce with R/Rcpp/RcppEigen/Matrix/jsonlite installed:
 
 ```sh
 Rscript reference/review/generate_random_paths.R "$PWD/reference"

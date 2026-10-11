@@ -14,7 +14,9 @@ on import or during a library call.
 
 This is a **research pre-alpha**, not an official release by the Scissor authors.
 The fixed reference is [Scissor 311560a1](https://github.com/sunduanchen/Scissor/tree/311560a1f160f665917e7da0fcf289914ee99773).
-R is used only as a development oracle. See the [numerical semantics](docs/SEMANTICS.md)
+Both the wheel and source distribution contain no R/C++ implementation.
+R is used only in the [separate development archive](https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference).
+See the [module and repository boundaries](docs/ARCHITECTURE.md). See the [numerical semantics](docs/SEMANTICS.md)
 and [measured validation limits](docs/VALIDATION_STATUS.md) before interpreting results.
 
 ## Install
@@ -32,14 +34,13 @@ python -m pip install "git+https://github.com/hurry060215-tech/py-Scissor.git"
 For reproducible work, replace the branch with a reviewed commit SHA:
 `git+https://github.com/hurry060215-tech/py-Scissor.git@<commit-sha>`.
 For a local checkout: `python -m pip install .`; for a supplied wheel:
-`python -m pip install /path/to/scissor_py-0.1.0.dev4-py3-none-any.whl`.
+`python -m pip install /path/to/scissor_py-0.1.0.dev5-py3-none-any.whl`.
 
 Optional extras from a checkout:
 
 ```bash
 python -m pip install '.[integration-test]'  # AnnData/H5AD support and tests
 python -m pip install '.[acceleration]'      # explicit corrected Gaussian Numba
-python -m pip install '.[notebook]'          # tutorial dependencies, excluding OmicVerse
 ```
 
 ## Runnable quickstart
@@ -135,9 +136,9 @@ alpha in order. Labels retain strict coefficient signs.
 The first four cover the numerical roles of upstream `Scissor`, preprocessing,
 `APML1` and `APML1.cv`; they do not reproduce Seurat preprocessing or unrelated
 APML1 penalties. Read the [API guide](docs/API.md), [AnnData contract](docs/ANNDATA.md),
-[three-family example](examples/synthetic.py) and [tutorial notebook](tutorials/scissor_walkthrough.ipynb).
-A proposed optional [`ov.single.Scissor` adapter](integration/omicverse/README.md)
-is included for review; upstream OmicVerse availability must not be assumed.
+[three-family example](examples/synthetic.py). Full OmicVerse wrapper, tutorial
+and skill contributions belong to their respective repositories, not this core
+package; see [repository responsibilities](docs/ARCHITECTURE.md).
 
 ## What has been validated?
 
@@ -159,8 +160,6 @@ is included for review; upstream OmicVerse availability must not be assumed.
 See [exact counts, tolerances and limitations](docs/VALIDATION_STATUS.md), the
 [aggregate comparison results](docs/luad/numerical_summary.json) and
 [reproduction guide](docs/REPRODUCING.md). Ordinary CI is not the full LUAD audit.
-The tutorial's exact code cells passed plain-Python execution; Jupyter-kernel
-execution remains unverified in the original restricted environment.
 
 Dense expression and similarity still consume memory. `max_dense_bytes` is an
 estimate, not a process-RSS limit. Graph storage stays sparse; no dense cell²
@@ -186,6 +185,6 @@ Biotechnology, [doi:10.1038/s41587-021-01091-3](https://doi.org/10.1038/s41587-0
 [CITATION.cff](CITATION.cff) separates this independent software from that paper.
 
 **GPL-3.0-or-later.** [LICENSE](LICENSE) and [NOTICE](NOTICE) retain upstream
-copyright, the fixed source provenance and modification history. Licensed
-upstream sources are included in the source distribution. No upstream
+copyright, the fixed source provenance and modification history. Upstream license notices and exact source hashes are retained here; the complete
+reference sources are preserved in the separate fixed development archive. No upstream
 endorsement, affiliation or ownership of the original method is claimed.

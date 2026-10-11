@@ -1,8 +1,0 @@
-{
-  "url": "https://github.com/omicverse/omicverse/archive/f9e1db8875d750d7f679514243a86fd2aa37d770.tar.gz",
-  "resolved_url": "https://codeload.github.com/omicverse/omicverse/tar.gz/f9e1db8875d750d7f679514243a86fd2aa37d770",
-  "bytes": 67242970,
-  "sha256": "cefec7f719b8e6530c570906e9306c1c725871a78765a658bbd49f719d941416",
-  "commit": "f9e1db8875d750d7f679514243a86fd2aa37d770",
-  "single_init_sha256": "64475abd116f77a5836607cf5cd1a50f8ea887b787cf74dbe05ab96b4844cd7a"
-}

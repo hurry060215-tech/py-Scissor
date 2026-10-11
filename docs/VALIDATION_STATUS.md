@@ -1,10 +1,10 @@
-# Current validation status — 2026-10-10
+# Validation evidence and current scope
 
-Research development version 0.1.0.dev4. **Declared full-data numerical grid completed.**
+Historical numerical validation used 0.1.0.dev4; current packaging is 0.1.0.dev5. **Declared full-data numerical grid completed.**
 No claim of complete equivalence with all official Scissor inputs or the original
 Seurat workflow. GPL-3.0-or-later; R is a development reference only.
 
-## Local checks completed
+## Historical local checks completed (2026-10-10)
 
 - 387 core/preprocessing/AnnData/packaging tests passed under Python 3.12.14, NumPy 2.3.5,
   SciPy 1.17.0 and pandas 2.2.3. Ordinary tests use saved synthetic R fixtures;
@@ -84,7 +84,7 @@ original Scissor source.
 Full real input matrices, phenotype/sample listings, per-cell reference outputs
 and private checkpoint history are intentionally not distributed here. Explicit
 download/preparation/comparison scripts and aggregate findings support independent
-reproduction. Synthetic fixtures and licensed upstream source are included.
+reproduction. Synthetic fixtures, licensed attribution notices and original source hashes are included; full upstream code is in the pinned development archive.
 
 Machine-readable [aggregate numerical checks](luad/numerical_summary.json)
 retain each failed comparison and show absent reports as not_reported, never a
@@ -102,7 +102,7 @@ new isolated driver completed with exit 0 in 5,116.55 seconds, peak RSS 462 MB.
 The final independent Cox recertification also exits 0 (25.00 seconds). Across
 all three tightened families, 63 nodes contain 1,089 fitted lambda vectors and
 4,467,078 coefficients, each independently recomputed R KKT residual <=1e-10.
-No unfinished node was reused. See the [recovery protocol](../reference/luad/ISOLATED_RECOVERY.md).
+No unfinished node was reused. See the [recovery protocol](https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference/luad/ISOLATED_RECOVERY.md).
 
 The numerical grid is complete: fifteen same-threshold comparisons pass and
 six lower-precision baseline comparisons remain failures. This does not validate
@@ -126,3 +126,19 @@ version metadata, the runnable README example and explicit threshold derivation.
 The resulting suite passed 393 tests. This is a packaging/documentation and
 Python-regression refresh; the historical full-data R experiments above were not
 rerun. Source, wheel and hosted-CI results are checked separately.
+
+The source-outside-tree clean wheel suite passed 388 tests with five explicit
+optional-Numba skips. All three model smoke fits and the exact README example
+also passed with network and child-process creation blocked. Hosted CI for
+[source commit 2cb65ba5](https://github.com/hurry060215-tech/py-Scissor/commit/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50)
+completed successfully in all three jobs: Python 3.10/3.12 core tests, package
+build/boundary checks and isolated-wheel examples, plus Python 3.12 tests with
+AnnData and Numba. [Recorded run](https://github.com/hurry060215-tech/py-Scissor/actions/runs/38105094573).
+
+## Core-only repository split (2026-10-11)
+
+The original R/C++ references and external OmicVerse/tutorial/skill contributions
+have moved out of the main tree and core packages. All Python numerical and
+AnnData tests remain, with the original JSON fixtures unchanged. Historical
+external-interface results above describe the archived candidate, not files
+bundled with version 0.1.0.dev5. See [architecture](ARCHITECTURE.md).

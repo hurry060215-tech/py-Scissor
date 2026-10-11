@@ -2,7 +2,7 @@
 
 # scissor-py · Python Scissor 原型
 
-独立、可安装的 Python APML1-Net 内核。运行时只依赖 NumPy、SciPy、pandas；R 仅用于开发期生成参考数据。
+独立、可安装的 Python APML1-Net 内核，三个模型的数值实现都在 src/scissor_py 的 Python 文件中，不是调用 R 的封装。默认只依赖 NumPy、SciPy、pandas，Numba 可选。wheel 和源码包均不包含 R/C++ 实现；开发对照代码已保存在[独立固定归档](https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference)。见[模块与仓库职责](docs/ARCHITECTURE.md)。
 
 已完成明确范围内的全量 LUAD 与独立 R 对照：三类模型在两端显式 `thresh=1e-10` 时，全部 3 个 alpha、20λ、五折 CV 和冷 refit 通过原定验收容差；较松阈值的失败仍保留。全量预处理、三类完整 AnnData 流程和真实 OmicVerse 薄接口也已验证。见 [当前验证状态](docs/VALIDATION_STATUS.md) 与 [全量输入审计](docs/luad/INPUT_AUDIT.md)。这是研究开发版本，不保证任意输入、默认阈值或原始 Seurat 工作流完全等价。托管 CI 请查看仓库 Actions；OmicVerse 接口当前仍是待上游接受的贡献候选。
 
@@ -93,7 +93,7 @@ result = scissor_from_anndata(
 - 相似度/联合归一化仍需要密集内存；`max_dense_bytes` 是估算预算，默认 1 GB，不是整个进程 RSS 的硬限制
 - 默认 NumPy 原型尚无普遍速度保证；可选 Gaussian Numba 已完成一组完整真实路径/交叉验证引擎对照，未加入 GPU/并行
 - 官方公开 LUAD TP53/生存完整输入、预处理及上述完整数值网格已核验；Gaussian 为同一全量设计上的已知信号合成表型，未做生物学有效性结论
-- OmicVerse `ov.single.Scissor` 本地薄适配候选、AnnData 写回与本地 skill 已验证；教程全部代码单元经普通 Python 执行通过，Jupyter 内核受运行环境限制未验证；远程 draft PR 待提交
+- 核心保留 AnnData 适配与写回；OmicVerse wrapper、完整教程、skill 已移出本仓，分别作为 omicverse、omicverse-tutorials、omicverse-skills 的独立候选贡献，尚不宣称已在上游可用
 - 仅 APML1-Net，未实现 APML1 的未使用 L0 后修剪、adaptive weights/signs 或其他 penalty
 
 ## 许可

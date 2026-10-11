@@ -23,10 +23,22 @@ def test_public_exports_and_version_metadata_agree():
     assert f'version: "{scissor_py.__version__}"' in (ROOT / "CITATION.cff").read_text()
 
 
-def test_required_reference_manifest_is_complete_and_unchanged():
-    manifest = json.loads((ROOT / "reference/manifest.json").read_text())
+def test_required_fixtures_and_retained_notices_match_manifest():
+    manifest_bytes = (ROOT / "reference/manifest.json").read_bytes()
+    assert hashlib.sha256(manifest_bytes).hexdigest() == "0e6700ce7fe42f26960dc234c3b4c9e67a308be11e6c45a60081acb5489162bc"
+    manifest = json.loads(manifest_bytes)
     assert manifest["fixture_count"] == 22
+    provenance = json.loads((ROOT / "reference/PROVENANCE.json").read_text())
+    omitted = set(provenance["omitted_upstream_source_paths"])
+    assert len(omitted) == 6
+    assert provenance["archive_commit"] == "2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50"
+    assert sum(name.startswith("fixtures/") for name in manifest["files"]) == 22
     for name, expected in manifest["files"].items():
+        if name in omitted:
+            assert name.startswith("upstream/") and Path(name).suffix in (".R", ".cpp")
+            assert re.fullmatch(r"[a-f0-9]{64}", expected["sha256"])
+            assert not (ROOT / "reference" / name).exists()
+            continue
         payload = (ROOT / "reference" / name).read_bytes()
         assert hashlib.sha256(payload).hexdigest() == expected["sha256"], name
         assert len(payload) == expected["bytes"], name

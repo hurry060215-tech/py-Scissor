@@ -5,16 +5,15 @@ recursive-include tests *.py *.json
 prune docs
 include docs/ANNDATA.md docs/SEMANTICS.md docs/VALIDATION.md docs/VALIDATION_STATUS.md
 include docs/API.md docs/REPRODUCING.md
-include docs/validation_metrics.json docs/notebook_execution.json
+include docs/validation_metrics.json
 include docs/luad/INPUT_AUDIT.md docs/luad/download_manifest.json
 include docs/luad/current_preprocessing_regression.json docs/luad/numba_full_cv_comparison.json
 include docs/luad/numerical_summary.json
 recursive-include examples *.py
-include reference/*.R reference/*.md reference/*.json reference/*.txt reference/Makevars
-recursive-include reference/upstream *
+include reference/*.md reference/*.json reference/*.txt
+include reference/upstream/LICENSE reference/upstream/DESCRIPTION reference/upstream/README.md
 recursive-include reference/fixtures *.json
-recursive-include reference/review *.R *.json *.md
-recursive-include reference/luad *.R *.cpp *.py *.md Makevars
+recursive-include reference/review *.json
 recursive-include scripts *.py
 exclude scripts/export_public_source.py
 prune reference/library
@@ -26,14 +25,18 @@ prune reference/luad/cache-upstream-O2
 prune reference/luad/preprocessCore-source
 
 
-recursive-include integration/omicverse *.py *.json *.patch *.md *.ini
-recursive-include skills *.md *.yaml *.py
-recursive-include tutorials *.ipynb *.py *.md
 
-prune integration/omicverse/.pytest_cache
 global-exclude *.pyc
 recursive-include .github *.yml
 # Real-data records stay in private validation storage, not a distributable sdist.
 exclude docs/luad/input_manifest.json
 exclude docs/luad/duplicate_gene_map.tsv
 recursive-exclude docs/luad/comparisons *.json
+
+# Core distribution boundary: independent contributions and oracle code are separate.
+prune integration
+prune skills
+prune tutorials
+prune reference/luad
+global-exclude *.R *.r *.cpp *.c *.h *.ipynb Makevars
+include docs/ARCHITECTURE.md

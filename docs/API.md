@@ -128,6 +128,6 @@ adapter `layer="X"` selects `adata.X`. It is nonmutating unless
 Validation/serialization finish before annotation; failed assignments roll back.
 The [full contract](ANNDATA.md) documents JSON fields and durability limits.
 
-The proposed OmicVerse class uses `layer=None` for X and reserves the string
-`"X"`. It is a separate thin adapter, not automatically installed by this
-package. See its [usage and contribution status](../integration/omicverse/README.md).
+The separately prepared OmicVerse class uses `layer=None` for X. That wrapper
+belongs to the OmicVerse repository and is not bundled in this Python core.
+See [repository responsibilities](ARCHITECTURE.md); upstream availability is not assumed.

@@ -1,0 +1,16 @@
+{
+  "archive_commit": "2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50",
+  "archive_url": "https://github.com/hurry060215-tech/py-Scissor/tree/2cb65ba5af3e1ffac05226f66d0e0ddf1eb7dc50/reference",
+  "archive_branch": "validation-reference",
+  "upstream_source_commit": "311560a1f160f665917e7da0fcf289914ee99773",
+  "omitted_upstream_source_paths": [
+    "upstream/R/APML1.R",
+    "upstream/R/Scissor.R",
+    "upstream/R/net_cox.R",
+    "upstream/R/net_lm.R",
+    "upstream/R/net_logit.R",
+    "upstream/src/Scissor.cpp"
+  ],
+  "fixture_count": 22,
+  "purpose": "Frozen expected outputs and provenance only. Original R/C++ and generators live in the separate development archive; the Python runtime never loads these files."
+}
